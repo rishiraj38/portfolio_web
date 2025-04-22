@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -15,24 +16,24 @@ export default function Header() {
         animate={{ opacity: [0.85, 1, 0.95, 1] }}
         transition={{ repeat: Infinity, duration: 3 }}
       >
-        Rishi Raj
+        RishiVerse
       </motion.div>
 
       <nav className="space-x-6 text-sm uppercase tracking-wider font-medium">
-        <a href="#about" className="relative group">
+        <Link href="/#about" className="relative group">
           About
           <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
-        </a>
+        </Link>
 
-        <a href="#projects" className="relative group">
+        <Link href="/#projects" className="relative group">
           Projects
           <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
-        </a>
+        </Link>
 
-        <a href="#contact" className="relative group">
+        <Link href="/contact" className="relative group">
           Contact
           <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
-        </a>
+        </Link>
       </nav>
     </motion.header>
   );
