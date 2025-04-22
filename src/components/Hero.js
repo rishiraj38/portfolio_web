@@ -12,7 +12,7 @@ export default function Hero() {
       setTechIndex((prev) => (prev + 1) % techList.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [techList.length]);
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-white px-4 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black via-gray-900 to-gray-800 overflow-hidden">
@@ -27,7 +27,7 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="text-5xl md:text-7xl font-bold text-center font-orbitron"
       >
-        Hi, I'm <span className="text-yellow-300">Rishi Raj</span>
+        Hi, I&apos;m <span className="text-yellow-300">Rishi Raj</span>
       </motion.h1>
 
       {/* Animated Tech Skills */}

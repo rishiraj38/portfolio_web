@@ -15,7 +15,7 @@ export default function Contact() {
         className="w-full max-w-3xl bg-white/10 backdrop-blur-lg rounded-2xl p-10 border border-white/10 shadow-xl space-y-8"
       >
         <h2 className="text-4xl font-bold text-center font-orbitron">
-          Let's Connect
+          Let&apos;s Connect
         </h2>
         <p className="text-center text-gray-200">
           Have a project in mind or just want to say hi? Fill out the form below
