@@ -1,39 +1,39 @@
 "use client";
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
-const messages = [
-  "Frustrated in your cubicle?",
-  "Have a bold idea?",
-  "Ready to break out?",
-];
+import { motion } from "framer-motion";
 
 export default function Header() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % messages.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <header className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#0f0c29] via-[#302b63] to-[#24243e]">
-      <div className="text-center px-6">
-        <AnimatePresence mode="wait">
-          <motion.h1
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
-            className="text-white text-4xl md:text-6xl font-extrabold tracking-tight"
-          >
-            {messages[index]}
-          </motion.h1>
-        </AnimatePresence>
-      </div>
-    </header>
+    <motion.header
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="fixed top-0 left-0 w-full z-50 px-8 py-4 flex justify-between items-center backdrop-blur-md bg-white/5 border-b border-white/10 text-white"
+    >
+      <motion.div
+        className="text-2xl font-semibold tracking-widest font-orbitron"
+        animate={{ opacity: [0.85, 1, 0.95, 1] }}
+        transition={{ repeat: Infinity, duration: 3 }}
+      >
+        Rishi Raj
+      </motion.div>
+
+      <nav className="space-x-6 text-sm uppercase tracking-wider font-medium">
+        <a href="#about" className="relative group">
+          About
+          <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+        </a>
+
+        <a href="#projects" className="relative group">
+          Projects
+          <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+        </a>
+
+        <a href="#contact" className="relative group">
+          Contact
+          <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+        </a>
+      </nav>
+    </motion.header>
   );
 }
