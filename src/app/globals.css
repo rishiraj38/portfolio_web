@@ -1,2 +1,33 @@
 @import "tailwindcss";
 
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8); 
+  margin-bottom: 0;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px; 
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4a1818; 
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
+  pointer-events: none; 
+}
