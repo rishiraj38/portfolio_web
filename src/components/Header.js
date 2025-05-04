@@ -18,11 +18,11 @@ export default function Header() {
     >
       {/* Logo */}
       <div className="flex items-center justify-center space-x-1">
-        {["R", "i", "s", "h", "i", "V", "e", "r", "s", "e"].map(
+        {["R","i", "s", "h", "i", "V", "e", "r", "s", "e"].map(
           (letter, index) => (
             <motion.span
               key={index}
-              className="text-xl md:text-2xl font-semibold tracking-widest font-orbitron"
+              className="text-xl md:text-2xl font-semibold tracking-normal font-orbitron"
               style={{
                 display: "inline-block",
                 color: "white",

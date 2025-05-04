@@ -19,7 +19,7 @@ export default function Projects() {
         My Projects
       </motion.h1>
 
-      {/* Project Screenshots */}
+      {/* Project */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -30,19 +30,19 @@ export default function Projects() {
           title="FoodieHub 🍔"
           description="A sleek Swiggy-inspired food ordering UI."
           link="https://foodie-hub-beta.vercel.app/"
-          screenshot="/foodie_hub.jpg" // Screenshot path inside the public folder
+          screenshot="/foodie_hub.jpg" 
         />
         <ProjectCard
           title="Random Color Generator 🎨"
           description="Click to generate beautiful random colors with HEX values."
           link="https://rishiraj38.github.io/Color-Generation/"
-          screenshot="/color_genrator.jpg" // Screenshot path inside the public folder
+          screenshot="/color_genrator.jpg" 
         />
         <ProjectCard
           title="Ping Pong Score Keeper 🏓"
           description="Fun interactive game to track scores between two players."
           link="https://rishiraj38.github.io/Ping-Pong-Score-Keeper/"
-          screenshot="/ping_pong.jpg" // Screenshot path inside the public folder
+          screenshot="/ping_pong.jpg" 
         />
       </motion.div>
     </section>

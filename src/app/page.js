@@ -4,10 +4,19 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "./project/page";
 import Footer from "@/components/Footer";
+import Particles from "../../ReactBits2/Particles/Particles";
+import SplashCursor from "../../ReacBits3/SplashCursor/SplashCursor";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black">
+    <main className="relative min-h-screen overflow-hidden text-white">
+      {/* Background Particles */}
+      <div className="fixed inset-0 -z-10 bg-black">
+        <Particles />
+        <SplashCursor />
+      </div>
+
+      {/* App Content */}
       <Cursor />
       <Header />
       <Hero />
