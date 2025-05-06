@@ -6,6 +6,7 @@ import Projects from "./project/page";
 import Footer from "@/components/Footer";
 import Particles from "../../ReactBits2/Particles/Particles";
 import SplashCursor from "../../ReacBits3/SplashCursor/SplashCursor";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   return (
@@ -15,13 +16,12 @@ export default function Home() {
         <Particles />
         <SplashCursor />
       </div>
-
-      {/* App Content */}
       <Cursor />
       <Header />
       <Hero />
       <Projects />
       <Footer />
+      <Analytics />
     </main>
   );
 }
