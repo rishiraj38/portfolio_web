@@ -31,7 +31,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-white/20 text-white hover:bg-white/30 transition-all duration-300"
+      className="p-2 rounded-full bg-white/20 text-white hover:bg-white/30 transition-all duration-300 px-4 py-2"
       aria-label="Toggle dark mode"
     >
       {isDarkMode ? (

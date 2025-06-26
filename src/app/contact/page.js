@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Particles from "../../../ReactBits2/Particles/Particles";
+import Header from "@/components/Header";
 
 export default function Contact() {
   return (
@@ -8,6 +10,7 @@ export default function Contact() {
       id="contact"
       className="relative w-full min-h-screen px-6 md:px-16 py-20 flex items-center justify-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white"
     >
+      <Header />
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}

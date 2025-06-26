@@ -1,7 +1,6 @@
 // src/app/page.js
-import Cursor from "@/components/Cursor";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import Hero from "./home/Hero";
 import Projects from "./project/page";
 import Footer from "@/components/Footer";
 import Particles from "../../ReactBits2/Particles/Particles";
@@ -16,7 +15,6 @@ export default function Home() {
         <Particles />
         <SplashCursor />
       </div>
-      <Cursor />
       <Header />
       <Hero />
       <Projects />

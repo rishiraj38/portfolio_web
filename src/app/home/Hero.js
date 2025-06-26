@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaJs, FaReact, FaPython, FaDatabase } from "react-icons/fa";
-import Particles from "../../ReactBits2/Particles/Particles";
+import Particles from "../../../ReactBits2/Particles/Particles";
 
 export default function Hero() {
   const [techIndex, setTechIndex] = useState(0);
@@ -85,6 +85,17 @@ export default function Hero() {
         className="mt-8 inline-block px-8 py-3 rounded-full text-lg border border-white backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300"
       >
         <Link href="/project">View My Work</Link>
+      </motion.a>
+
+      {/* Download Resume Button */}
+      <motion.a
+        href="/Resume.pdf"
+        download
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="inline-block px-8 py-3 mt-7 rounded-full text-lg border border-white backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300"
+      >
+        Download Resume
       </motion.a>
 
       {/* Tech Icons */}

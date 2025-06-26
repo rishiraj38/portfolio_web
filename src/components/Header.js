@@ -14,11 +14,11 @@ export default function Header() {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-white/5 border-b border-white/10 text-white"
+      className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-white/5 border-b border-black/10 text-white"
     >
       {/* Logo */}
-      <div className="flex items-center justify-center space-x-1">
-        {["R","i", "s", "h", "i", "V", "e", "r", "s", "e"].map(
+      <div className="flex items-center justify-center space-x-1 pl-3">
+        {["R", "i", "s", "h", "i", "V", "e", "r", "s", "e"].map(
           (letter, index) => (
             <motion.span
               key={index}
@@ -40,7 +40,7 @@ export default function Header() {
                 repeat: Infinity,
                 repeatType: "loop",
                 duration: 1.5,
-                ease: "easeInOut", 
+                ease: "easeInOut",
                 delay: index * 0.1,
               }}
             >
@@ -49,12 +49,17 @@ export default function Header() {
           )
         )}
       </div>
-
-      {/* Dark Mode Toggle */}
-      <DarkModeToggle />
+      <div className="pl-20">
+        <DarkModeToggle />
+      </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex space-x-6 text-sm uppercase tracking-wider font-medium">
+      <nav className="hidden md:flex space-x-6 text-sm uppercase tracking-wider font-medium pr-4">
+        <Link href="/" className="relative group">
+          Home
+          <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
+        </Link>
+
         <Link href="/about" className="relative group">
           About
           <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full" />
@@ -86,6 +91,9 @@ export default function Header() {
           transition={{ duration: 0.3 }}
           className="absolute top-full left-0 w-full bg-black bg-opacity-90 backdrop-blur-md text-white py-6 flex flex-col items-center space-y-6 text-lg font-semibold md:hidden"
         >
+          <Link href="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
           <Link href="/about" onClick={() => setMenuOpen(false)}>
             About
           </Link>
