@@ -25,7 +25,7 @@ const Footer = () => {
     <footer className="relative bg-card-bg border-t border-card-border pt-20 pb-10 overflow-hidden">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none opacity-50" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
@@ -39,7 +39,8 @@ const Footer = () => {
               <span className="text-foreground">Verse</span>
             </h3>
             <p className="text-muted leading-relaxed mb-6">
-              Building digital experiences that inspire and innovate. Let's create something amazing together.
+              Building digital experiences that inspire and innovate. Let&#39;s
+              create something amazing together.
             </p>
             <div className="flex gap-4">
               {footerLinks.Socials.map((social, index) => {
@@ -68,7 +69,9 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="text-lg font-black mb-6 tracking-tight">Quick Links</h4>
+            <h4 className="text-lg font-black mb-6 tracking-tight">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               {footerLinks.Navigation.map((link, index) => (
                 <li key={index}>
@@ -92,9 +95,11 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
             className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20"
           >
-            <h4 className="text-lg font-black mb-3 tracking-tight">Let's Work Together</h4>
+            <h4 className="text-lg font-black mb-3 tracking-tight">
+              Let&#39;s Work Together
+            </h4>
             <p className="text-muted text-sm mb-4">
-              Have a project in mind? Let's make it happen!
+              Have a project in mind? Let&#39;s make it happen!
             </p>
             <Link
               href="/contact"
@@ -108,13 +113,20 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-card-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted text-sm flex items-center gap-2">
-            © {currentYear} RishiVerse. Made with <Heart size={16} className="text-primary" /> by Rishi
+            © {currentYear} RishiVerse. Made with{" "}
+            <Heart size={16} className="text-primary" /> by Rishi
           </p>
           <div className="flex gap-6 text-sm text-muted">
-            <Link href="/privacy" className="hover:text-primary transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-primary transition-colors"
+            >
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-primary transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-primary transition-colors"
+            >
               Terms
             </Link>
           </div>

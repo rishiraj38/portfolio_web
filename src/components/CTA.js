@@ -7,7 +7,7 @@ const CTA = () => {
     <section className="relative py-32 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 pointer-events-none" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -19,9 +19,10 @@ const CTA = () => {
           <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tight">
             Ready to Start a <span className="text-gradient">Project?</span>
           </h2>
-          
+
           <p className="text-xl md:text-2xl text-muted mb-12 leading-relaxed max-w-2xl mx-auto">
-            Let's collaborate and bring your ideas to life with cutting-edge technology and stunning design.
+            Let&#39;s collaborate and bring your ideas to life with cutting-edge
+            technology and stunning design.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -34,7 +35,7 @@ const CTA = () => {
               Get In Touch
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.a>
-            
+
             <motion.a
               href="/about"
               className="px-10 py-5 bg-transparent border-2 border-foreground/10 text-foreground font-bold rounded-full text-lg hover:bg-foreground/5 hover:border-primary transition-all duration-300"

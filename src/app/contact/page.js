@@ -13,12 +13,12 @@ export default function Contact() {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-6xl md:text-8xl font-black mb-8 tracking-tight">
-            Let's <span className="text-gradient">Connect</span>
+            Let&#39;s <span className="text-gradient">Connect</span>
           </h1>
-          
+
           <p className="text-xl text-muted mb-12 leading-relaxed">
-            Have a project in mind or just want to chat? I'd love to hear from you. 
-            Reach out through any of the channels below!
+            Have a project in mind or just want to chat? I&#39;d love to hear
+            from you. Reach out through any of the channels below!
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
