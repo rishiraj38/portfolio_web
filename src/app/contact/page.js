@@ -1,64 +1,123 @@
 "use client";
-
 import { motion } from "framer-motion";
-import Particles from "../../../ReactBits2/Particles/Particles";
-import Header from "@/components/Header";
+import { Mail, Linkedin, Github, Twitter } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="relative w-full min-h-screen px-6 md:px-16 py-20 flex items-center justify-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white"
-    >
-      <Header />
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="w-full max-w-3xl bg-white/10 backdrop-blur-lg rounded-2xl p-10 border border-white/10 shadow-xl space-y-8"
-      >
-        <h2 className="text-4xl font-bold text-center font-orbitron">
-          Let&apos;s Connect
-        </h2>
-        <p className="text-center text-gray-200">
-          Have a project in mind or just want to say hi? Fill out the form below
-          👇
-        </p>
-
-        <form
-          action="https://formsubmit.co/your@email.com" // replace with your email or backend endpoint
-          method="POST"
-          className="space-y-6"
+    <main className="min-h-screen bg-background text-foreground pt-32 pb-20">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto"
         >
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Your Name"
-            className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-          />
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Your Email"
-            className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-          />
-          <textarea
-            name="message"
-            required
-            placeholder="Your Message"
-            rows={5}
-            className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-          ></textarea>
-          <button
-            type="submit"
-            className="w-full bg-cyan-400 text-black font-bold py-3 rounded-xl hover:bg-cyan-300 transition-all duration-300"
+          <h1 className="text-6xl md:text-8xl font-black mb-8 tracking-tight">
+            Let's <span className="text-gradient">Connect</span>
+          </h1>
+          
+          <p className="text-xl text-muted mb-12 leading-relaxed">
+            Have a project in mind or just want to chat? I'd love to hear from you. 
+            Reach out through any of the channels below!
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <motion.a
+              href="mailto:rishi@rishiverse.com"
+              className="group p-8 rounded-2xl bg-card-bg border border-card-border hover:border-primary transition-all duration-300 flex items-center gap-4"
+              whileHover={{ scale: 1.02, y: -5 }}
+            >
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <Mail size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-1">Email</h3>
+                <p className="text-muted">rishi@rishiverse.com</p>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-8 rounded-2xl bg-card-bg border border-card-border hover:border-primary transition-all duration-300 flex items-center gap-4"
+              whileHover={{ scale: 1.02, y: -5 }}
+            >
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <Linkedin size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-1">LinkedIn</h3>
+                <p className="text-muted">Connect professionally</p>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-8 rounded-2xl bg-card-bg border border-card-border hover:border-primary transition-all duration-300 flex items-center gap-4"
+              whileHover={{ scale: 1.02, y: -5 }}
+            >
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <Github size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-1">GitHub</h3>
+                <p className="text-muted">Check out my code</p>
+              </div>
+            </motion.a>
+
+            <motion.a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-8 rounded-2xl bg-card-bg border border-card-border hover:border-primary transition-all duration-300 flex items-center gap-4"
+              whileHover={{ scale: 1.02, y: -5 }}
+            >
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <Twitter size={28} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-1">Twitter</h3>
+                <p className="text-muted">Follow for updates</p>
+              </div>
+            </motion.a>
+          </div>
+
+          <motion.div
+            className="p-10 rounded-3xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
           >
-            Send Message 🚀
-          </button>
-        </form>
-      </motion.div>
-    </section>
+            <h2 className="text-3xl font-bold mb-4">Quick Message</h2>
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full px-6 py-4 rounded-xl bg-background border border-card-border focus:border-primary outline-none transition-colors"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full px-6 py-4 rounded-xl bg-background border border-card-border focus:border-primary outline-none transition-colors"
+              />
+              <textarea
+                placeholder="Your Message"
+                rows="4"
+                className="w-full px-6 py-4 rounded-xl bg-background border border-card-border focus:border-primary outline-none transition-colors resize-none"
+              />
+              <button
+                type="submit"
+                className="w-full px-8 py-4 bg-primary text-primary-foreground font-bold rounded-xl hover:scale-105 transition-transform duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </motion.div>
+        </motion.div>
+      </div>
+    </main>
   );
 }
