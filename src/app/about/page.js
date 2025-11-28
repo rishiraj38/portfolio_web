@@ -42,7 +42,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-4 text-foreground">
                   Experience
                 </h3>
-                <p className="text-muted">3+ years building web applications</p>
+                <p className="text-muted">1+ years building web applications</p>
               </motion.div>
 
               <motion.div

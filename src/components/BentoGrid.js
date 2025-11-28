@@ -70,7 +70,7 @@ const BentoGrid = () => {
       title: "Frontend Development",
       description: "Building responsive, performant web applications with React, Next.js, and modern JavaScript frameworks. Expertise in creating pixel-perfect user interfaces.",
       stats: [
-        { value: "5+", label: "Years" },
+        { value: "1+", label: "Years" },
         { value: "50+", label: "Projects" },
       ]
     },

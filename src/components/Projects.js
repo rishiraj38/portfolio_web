@@ -54,7 +54,7 @@ const ProjectCard = ({ project, index }) => {
     >
       {/* Glow effect on hover */}
       <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl opacity-0 group-hover:opacity-30 blur-xl transition duration-500" />
-      
+
       <div className="relative h-full bg-card-bg rounded-3xl border border-card-border overflow-hidden backdrop-blur-sm">
         {/* Image Area */}
         <div className="h-48 relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
@@ -66,7 +66,7 @@ const ProjectCard = ({ project, index }) => {
               className="object-cover group-hover:scale-110 transition-transform duration-500"
             />
           )}
-          
+
           {/* Animated grid overlay */}
           <motion.div
             className="absolute inset-0"
@@ -86,7 +86,7 @@ const ProjectCard = ({ project, index }) => {
               ease: "linear",
             }}
           />
-          
+
           {/* Pulsing light effect */}
           <motion.div
             className="absolute inset-0"
@@ -99,10 +99,11 @@ const ProjectCard = ({ project, index }) => {
               ease: "easeInOut",
             }}
             style={{
-              background: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), transparent 70%)",
+              background:
+                "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), transparent 70%)",
             }}
           />
-          
+
           {/* Floating particles */}
           <div className="absolute inset-0">
             {[...Array(5)].map((_, i) => (
@@ -125,7 +126,7 @@ const ProjectCard = ({ project, index }) => {
               />
             ))}
           </div>
-          
+
           {/* Color shift overlay */}
           <motion.div
             className="absolute inset-0"
@@ -143,7 +144,7 @@ const ProjectCard = ({ project, index }) => {
               ease: "linear",
             }}
           />
-          
+
           <div className="absolute inset-0 bg-gradient-to-t from-card-bg/80 to-transparent" />
           <div className="absolute top-4 left-4 text-6xl font-black text-white/10">
             0{project.id}
@@ -156,7 +157,7 @@ const ProjectCard = ({ project, index }) => {
             <h3 className="text-2xl font-black group-hover:text-primary transition-colors">
               {project.title}
             </h3>
-            <motion.div 
+            <motion.div
               className="flex gap-2"
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -204,15 +205,19 @@ const ProjectCard = ({ project, index }) => {
               </motion.span>
             ))}
           </div>
-
-          <motion.div
-            className="flex items-center gap-2 text-primary font-bold pt-4 border-t border-card-border"
-            animate={{ x: isHovered ? 5 : 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            View Project
-            <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform duration-300" />
-          </motion.div>
+          <a href={project.link}>
+            <motion.div
+              className="flex items-center gap-2 text-primary font-bold pt-4 border-t border-card-border"
+              animate={{ x: isHovered ? 5 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              View Project
+              <ArrowUpRight
+                size={18}
+                className="group-hover:rotate-45 transition-transform duration-300"
+              />
+            </motion.div>
+          </a>
         </div>
       </div>
     </motion.div>
@@ -227,8 +232,8 @@ const Projects = () => {
       desc: "A fully functional Netflix clone with user authentication, video streaming, and a responsive UI built with modern web technologies.",
       tech: ["React", "Firebase", "TMDB API", "Tailwind"],
       image: "/netflix.png",
-      link: "#",
-      github: "#"
+      link: "https://netflix-gpt-theta-amber.vercel.app/",
+      github: "https://github.com/rishiraj38/netflix-gpt",
     },
     {
       id: 2,
@@ -236,26 +241,24 @@ const Projects = () => {
       desc: "A food delivery platform with restaurant listings, menu browsing, cart functionality, and order tracking features.",
       tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
       image: "/foodie_hub.jpg",
-      link: "#",
-      github: "#"
+      link: "https://foodie-hub-beta.vercel.app/",
+      github: "https://github.com/rishiraj38/foodie_hub",
     },
     {
       id: 3,
-      title: "Color Generator",
-      desc: "An interactive color palette generator tool with gradient creation, color schemes, and export functionality for designers.",
-      tech: ["React", "CSS3", "JavaScript"],
-      image: "/color_genrator.jpg",
-      link: "#",
-      github: "#"
-    },
-    {
-      id: 4,
-      title: "Ping Pong Game",
-      desc: "A classic ping pong game with smooth animations, score tracking, and AI opponent built with vanilla JavaScript.",
-      tech: ["HTML5 Canvas", "JavaScript", "CSS3"],
-      image: "/ping_pong.jpg",
-      link: "#",
-      github: "#"
+      title: "InkSpire",
+      desc: "A Blogging platform for developers.",
+      tech: [
+        "React",
+        "Express",
+        "CloudFlare Workers",
+        "Prisma",
+        "NeonDB",
+        "FramerMotion",
+      ],
+      image: "/inkspire.png",
+      link: "https://ink-spire-rho.vercel.app/",
+      github: "https://github.com/rishiraj38/blog_web",
     },
   ];
 

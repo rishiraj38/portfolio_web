@@ -51,7 +51,7 @@ const CTA = () => {
             {[
               { value: "20+", label: "Projects" },
               { value: "100%", label: "Satisfaction" },
-              { value: "3+", label: "Years Exp" },
+              { value: "1+", label: "Years Exp" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
