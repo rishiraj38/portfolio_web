@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBackground from "@/components/DynamicBackground";
+import ScrollToTop from "@/components/ScrollToTop";
+import ThemeAudioPlayer from "@/components/ThemeAudioPlayer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,19 +18,22 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "RishiVerse - Portfolio",
-  description: "Building the future, one pixel at a time.",
+  description: "A creative developer portfolio showcasing projects and skills.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body className="antialiased overflow-x-hidden selection:bg-red-500/30 selection:text-red-200">
         <DynamicBackground />
         <Header />
         {children}
         <Footer />
+        <ScrollToTop />
+        <ThemeAudioPlayer />
       </body>
     </html>
   );
