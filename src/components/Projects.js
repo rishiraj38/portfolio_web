@@ -260,6 +260,20 @@ const Projects = () => {
       link: "https://ink-spire-rho.vercel.app/",
       github: "https://github.com/rishiraj38/blog_web",
     },
+    {
+      id: 4,
+      title: "AeroPrep",
+      desc: "A platform for preparing for mock interview questions.",
+      tech: [
+        "Next.js",
+        "Express",
+        "Prisma",
+        "NeonDB",
+      ],
+      image: "/aero_prep.png",
+      link: "https://ai-interview-coach-eight-mu.vercel.app/",
+      github: "https://github.com/rishiraj38/AeroPrep",
+    },
   ];
 
   return (
