@@ -274,6 +274,24 @@ const Projects = () => {
       link: "https://ai-interview-coach-eight-mu.vercel.app/",
       github: "https://github.com/rishiraj38/AeroPrep",
     },
+    {
+      id: 5,
+      title: "Helix | An Autinonomous AI News Aggregator",
+      desc: "An autonomous AI news aggregator that fetches and displays news articles from various sources.",
+      tech: [
+        "Next.js",
+        "Python",
+        "Prisma",
+        "NeonDB",
+        "Pydatic",
+        "GitHub Actions",
+        "Docker",
+        "Groq"
+      ],
+      image: "/helix.png",
+      link: "https://helix-seven-eta.vercel.app/",
+      github: "https://github.com/rishiraj38/news-aggregator",
+    },
   ];
 
   return (
